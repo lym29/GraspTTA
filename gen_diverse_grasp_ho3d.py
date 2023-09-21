@@ -123,7 +123,7 @@ def main(args, model, cmap_model, eval_loader, device, rh_mano, rh_faces):
             contact = ~exterior
             sample_contact = contact.sum() > 0
             # simulation displacement
-            vhacd_exe = "/hand-object/v-hacd/build/linux/test/testVHACD"
+            vhacd_exe = "/root/yumeng/testVHACD"
             try:
                 simu_disp = run_simulation(final_mano_verts, rh_faces.reshape((-1, 3)),
                                           obj_mesh_verts, origin_faces.cpu().numpy().astype(np.int32).reshape((-1, 3)),

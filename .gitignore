@@ -1,0 +1,8 @@
+checkpoints/
+diverse_grasp/
+
+*.cpython
+.DS_Store
+models
+tmp
+*.pyc

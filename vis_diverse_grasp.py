@@ -209,9 +209,11 @@ if __name__ == '__main__':
 
         # vis current affordance
         meshes = [hand_mesh, obj_mesh]
-        trimesh.Scene(meshes).show()
+        # trimesh.Scene(meshes).show()
         meshes_all.append(hand_mesh)
 
     # vis all affordance
     meshes_all.append(obj_mesh)
-    trimesh.Scene(meshes_all).show()
+    for i, mesh in enumerate(meshes_all):
+        mesh.export(f"./diverse_grasp/ho3d/{i}.ply")
+    # trimesh.Scene(meshes_all).show()
